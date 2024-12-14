@@ -1,0 +1,6 @@
+spring:
+ application:
+  name: EmployeeService
+  
+ config:
+      import: "optional:configserver:http://localhost:8080"

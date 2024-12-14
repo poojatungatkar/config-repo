@@ -1,0 +1,18 @@
+server: 
+  port: 8080
+  
+spring:
+  application:
+    name: ConfigServer
+    
+  cloud:
+   config:
+      server:
+        git:
+          uri: https://github.com/poojatungatkar/config-repo.git
+          username: poojatungatkar68@gmail.com
+          password: Pooja@8108
+          clone-on-start: true
+
+  
+  
