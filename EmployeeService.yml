@@ -12,12 +12,14 @@ management:
   tracing:
     sampling:
       probability: 1.0
+
+ # db properties
 spring:
- datasource:
-  url: jdbc:postgresql://localhost:5432/microservices
-  username: postgres
-  password: root
-jpa:
-  show-sql: true
-  hibernate:
-   ddl-auto: update
+  datasource:
+    url: jdbc:postgresql://localhost:5432/microservices
+    username: postgres
+    password: root
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
