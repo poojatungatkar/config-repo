@@ -9,7 +9,7 @@ spring:
     gateway:
       routes[0]:
         id: DEPARTMENTSERVICE
-        uri: lb:/DEPARTMENTSERVICE
+        uri: lb://DEPARTMENTSERVICE
         predicates[0]: Path= /dept/**
 server:
   port: '8086'
