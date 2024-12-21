@@ -8,4 +8,5 @@ public interface DepartmentService
 {
 	public Department saveDept(Department dept);
 	public List<Department> getAllDepartment();
+	public Department getDepartment(Integer id);
 }
