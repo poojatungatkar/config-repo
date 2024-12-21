@@ -1,20 +1,15 @@
-server:
- port: 8083
 eureka:
- client:
-  service-url:
-   defaultZone: http://localhost:8761/eureka
-management:
- tracing:
-  sampling:
-   probability: 0.1
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: 'true'
+    register-with-eureka: 'true'
 spring:
- cloud:
-  gateway:
-   routes[0]:
-    id: DEPARTMENTSERVICE
-    uri: lb://DEPARTMENTSERVICE
-    predicates[0]:
-     path: /dept/**
-
- 
+  cloud:
+    gateway:
+      routes[0]:
+        id: DEPARTMENTSERVICE
+        uri: lb:/DEPARTMENTSERVICE
+        predicates[0]: Path= /dept/**
+server:
+  port: '8086'
